@@ -1,12 +1,18 @@
 /* / **************************************
-pulse the pwm pins specified in pins[] when a
-MIDI note on message is received
+musicBotsPulse
+Pulse the PWM pins specified in pins[] when 
+MIDI "note on" messages are received
+automatically turn off after set amount of time 
 
 Use with 5 channel modular-muse motor driver board:
 https://oshpark.com/shared_projects/uq5EsZsM
-with a Teensy LC
+Made for a Teensy LC
 
-uses Teensyduino: https://www.pjrc.com/teensy/teensyduino.html
+or a 4 channel modular-muse motor driver board and some jumper wires
+https://oshpark.com/shared_projects/1uvL8iDM
+
+NOTE: this code uses Teensyduino:
+https://www.pjrc.com/teensy/teensyduino.html
 
 variables:
 pins[] - this array determines output pins to use (assumes PWM)

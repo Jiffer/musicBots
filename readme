@@ -1,4 +1,6 @@
-code for the modular-muse musicBots motor driver boards.
+www.modular-muse.com/music-bots 
+
+Code for the modular-muse musicBots motor driver boards.
 
 simpleMidiOutput - demonstrates very basic use of the Teensy MIDI library to control a PWM output with note on and note off messages
 

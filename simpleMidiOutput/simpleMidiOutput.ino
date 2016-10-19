@@ -66,8 +66,3 @@ void OnNoteOff(byte channel, byte note, byte velocity) {
     analogWrite(myOutput, 0);
   }
 }
-
-
-
-
-

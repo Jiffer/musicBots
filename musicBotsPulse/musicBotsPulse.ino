@@ -32,7 +32,7 @@ int pins[] = {3, 4, 6, 9, 10};
 int lowNote = 60; // MIDI note 60 (a.k.a. C-3)
 
 // how long to pulse in ms
-unsigned int onTime = 10;
+unsigned int onTime = 15;
 
 // keep track of the last time a motor channel (note) was triggered
 unsigned long lastHit[numNotes];
@@ -87,14 +87,14 @@ void OnNoteOn(byte channel, byte note, byte velocity) {
   // check if the note is in range of our possible motor outputs
   if (note >= lowNote && note < lowNote + numNotes) {
     // adjust for note # offset
-    int notePin = note - lowNote;
+    int noteNumber = note - lowNote;
     
     // bit shift 7 bits to 12
-    analogWrite(pins[notePin], velocity << 5);
+    analogWrite(pins[noteNumber], velocity << 5);
     
     // keep track of which note is high and reset the time since the lastHit to now
-    noteHigh[note] = true;
-    lastHit[note] = millis();
+    noteHigh[noteNumber] = true;
+    lastHit[noteNumber] = millis();
   }
 
 }
